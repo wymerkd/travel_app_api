@@ -11,11 +11,8 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    if @review = Review.create!(review_params)
-    # json_response(@review, :created) Do we need this line??
-    render status: 201, json: {
-      message: "This review has been created successfully."}
-    end
+    @review = Review.create!(review_params)
+    json_response(@review, :created)
   end
 
 
