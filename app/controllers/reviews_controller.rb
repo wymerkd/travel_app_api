@@ -15,7 +15,6 @@ class ReviewsController < ApplicationController
     json_response(@review, :created)
   end
 
-
   def update
     @review = Review.find(params[:id])
     if @review.update!(review_params)

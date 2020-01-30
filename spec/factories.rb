@@ -1,4 +1,15 @@
 FactoryBot.define do
+  factory :item do
+    name { "MyString" }
+    description { "MyText" }
+  end
+
+  factory :user do
+    name { "MyString" }
+    email { "MyString" }
+    password_digest { "MyString" }
+  end
+
   factory :review do
     author {"Puppy"}
     content {"if you arent first you are last"}
